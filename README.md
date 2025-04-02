@@ -7,11 +7,12 @@
 * Documentation: wiring diagram + basic operating instructions
 * Unit Tests: tests for individual hardware components (input / output devices)
 * flutter_app : dart code for our Flutter app.
-* Parameters: contains description of configurable parameters 
-* Assets: 3D printed parts, Audio files used in this project, 
+* Parameters: contains description of parameters and settings that can be modified IN YOUR CODE
+* Assets: link to 3D printed parts, Audio files used in this project, etc
+
+## ESP32 SDK version used in this project: 
 
 ## Arduino/ESP32 libraries used in this project:
-## Arduino/ESP libraries installed for the project:
 * XXXX - version XXXXX
 * XXXX - version XXXXX
 * XXXX - version XXXXX
