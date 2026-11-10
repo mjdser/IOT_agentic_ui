@@ -1,25 +1,32 @@
-## XXXXX Project by :  
-  
-## Details about the project
- 
-## Folder description :
-* ESP32: source code for the esp side (firmware).
-* Documentation: wiring diagram + basic operating instructions
-* Unit Tests: tests for individual hardware components (input / output devices)
-* flutter_app : dart code for our Flutter app.
-* Parameters: contains description of parameters and settings that can be modified IN YOUR CODE
-* Assets: link to 3D printed parts, Audio files used in this project, Fritzing file for connection diagram (FZZ format) etc
+# IOT Agentic UI
 
-## ESP32 SDK version used in this project: 
+**Majd Sarahni** and **Aseel Fraira**
 
-## Arduino/ESP32 libraries used in this project:
-* XXXX - version XXXXX
-* XXXX - version XXXXX
-* XXXX - version XXXXX
+Describe a screen in plain language. The tool writes the LVGL interface and its tests, flashes them to an ESP32, and runs the tests on the real display. A camera photographs the screen, a second model checks the photos, and failures go back to the writer to fix.
 
-## Connection diagram:
+This project is part of [ICST](https://icst.cs.technion.ac.il/), the Interdisciplinary Center for Smart Technologies at the Taub Faculty of Computer Science, Technion.
 
-## Project Poster:
- 
-This project is part of ICST - The Interdisciplinary Center for Smart Technologies, Taub Faculty of Computer Science, Technion
-https://icst.cs.technion.ac.il/
+## What is in this repo
+
+- `tools/ui_generator` — chat page and the generator that writes, flashes, and checks the UI
+- `lvgl_ui` — the generated interface and the on-device test hooks
+- `ESP32` — firmware
+- `flutter_app` — the Flutter app
+- `test` — on-device tests for the display and the touch panel
+- `Documentation` — wiring notes
+
+## Hardware
+
+ESP32 (DOIT DevKit v1), an ILI9341 display, and an XPT2046 touch panel.
+
+## Run the generator
+
+Copy `.env.example` to `.env` and set `GEMINI_API_KEY`. Do not commit `.env`.
+
+```
+python tools/ui_generator/server.py
+```
+
+Then open http://127.0.0.1:8765
+
+Setup, the camera, and the test loop are documented in `tools/ui_generator/README.md`.
